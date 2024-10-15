@@ -1,0 +1,44 @@
+Button :
+<div className="card">
+    <Button count={count} onClickFunction={() => setCount ((count)=> count +1)}></Button>
+</div>
+
+const [text, setText] = useState("")
+
+type ButtonProps = {
+    count: number;
+    onClickFunction: () => void;
+};
+
+export const Button = ({count, onClickFunction}: ButtonProps) => {
+    return (
+        <button onClick={onClickFunction}>
+            This is a button where you want to click: {count}
+        </button>
+    )
+};
+
+
+
+InputText :
+
+<input type="text" value={text} onChange={(e) =>
+  setText(e.target.value)}/>
+<div>
+  Vous avez écrit: {text}
+</div>
+
+import { ChangeEvent } from "react";
+
+type InputTextProps = {
+    value: string;
+    onChangeHandler: (e: ChangeEvent<HTMLInputElement>) => void;
+};
+
+const InputText = ({ onChangeHandler, value = "" }: InputTextProps) =>{
+    return (
+        <input type="text" value={value} onChange={(e) => onChangeHandler(e)}/>
+    );
+};
+
+export default InputText;
