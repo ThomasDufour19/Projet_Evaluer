@@ -40,7 +40,12 @@ const UserCard: React.FC<UserProps> = ({ user }) => {
 
             {showMore && (
                 <div className="extra-info">
-                    <p>Adresse: {user.location.street.number} {user.location.street.name}, {user.location.city}, {user.location.country}</p>
+                    <p>Adresse:
+                        {user.location.street.number}
+                        {user.location.street.name},
+                        {user.location.city},
+                        {user.location.country}
+                    </p>
                     <p>Téléphone: {user.phone}</p>
                     <p>Cellulaire: {user.cell}</p>
                 </div>

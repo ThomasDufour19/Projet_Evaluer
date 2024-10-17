@@ -12,6 +12,7 @@
 
 .user-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
 
@@ -22,7 +23,9 @@
   border-radius: 8px;
   text-align: center;
   margin-left: 200px;
-  background-color: red;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .user-card img {
@@ -40,6 +43,7 @@
   color: white;
   cursor: pointer;
   border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .extra-info {
